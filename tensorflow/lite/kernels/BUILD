@@ -499,6 +499,7 @@ cc_library(
         "topk_v2.cc",
         "transpose.cc",
         "transpose_conv.cc",
+        "transpose_conv_bias.cc",
         "unidirectional_sequence_lstm.cc",
         "unidirectional_sequence_rnn.cc",
         "unique.cc",

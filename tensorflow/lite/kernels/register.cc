@@ -25,6 +25,7 @@ TfLiteRegistration* Register_NUMERIC_VERIFY();
 TfLiteRegistration* Register_AUDIO_SPECTROGRAM();
 TfLiteRegistration* Register_MFCC();
 TfLiteRegistration* Register_DETECTION_POSTPROCESS();
+TfLiteRegistration* RegisterConvolution2DTransposeBias();
 
 }  // namespace custom
 
@@ -287,6 +288,8 @@ BuiltinOpResolver::BuiltinOpResolver() {
             tflite::ops::custom::Register_AUDIO_SPECTROGRAM());
   AddCustom("TFLite_Detection_PostProcess",
             tflite::ops::custom::Register_DETECTION_POSTPROCESS());
+  AddCustom("Convolution2DTransposeBias", 
+            tflite::ops::custom::RegisterConvolution2DTransposeBias());            
 }
 
 }  // namespace builtin
